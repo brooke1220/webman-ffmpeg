@@ -10,7 +10,7 @@
     "ramsey/collection": "^1.2.2",
     "illuminate/support": "^9.51",
     "illuminate/collections": "^9.51",
-    "webman-tech/laravel-filesystem": "^3.0",
+    "webman-tech/laravel-filesystem": "^3.0"
   },
   "autoload": {
     "psr-4": {
