@@ -2,8 +2,6 @@
 
 namespace Brooke1220\WebmanFfmpeg\Support;
 
-use support\Facade;
-
 /**
  * @method static \Brooke1220\WebmanFfmpeg\Http\DynamicHLSPlaylist dynamicHLSPlaylist($disk)
  * @method static \Brooke1220\WebmanFfmpeg\MediaOpener fromDisk($disk)
@@ -14,10 +12,15 @@ use support\Facade;
  *
  * @see \Brooke1220\WebmanFfmpeg\MediaOpener
  */
-class FFMpeg extends Facade
+class FFMpeg
 {
-    protected static function getFacadeClass()
+    public static function instance(): MediaOpenerFactory
     {
-        return 'webman-ffmpeg';
+        return Container::get('webman-ffmpeg');
+    }
+
+    public static function __callStatic($name, $arguments)
+    {
+        return static::instance()->{$name}(...$arguments);
     }
 }
