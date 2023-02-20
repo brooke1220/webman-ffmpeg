@@ -10,7 +10,7 @@ composer require brooke1220/webman-ffmpeg
 ```
 ## 使用
 ```php
-use Brooke1220\WebmanFfmpeg\Support\ FFMpeg;
+use Brooke1220\WebmanFfmpeg\Support\FFMpeg;
 ```
 
 具体使用方法参考 https://github.com/protonemedia/laravel-ffmpeg
